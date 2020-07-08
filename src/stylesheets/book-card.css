@@ -1,0 +1,10 @@
+.book-card {
+  /* width: 33.33%; */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: auto;
+}

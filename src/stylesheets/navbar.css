@@ -1,0 +1,16 @@
+img {
+  height: 100px;
+}
+
+.navbar {
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  align-items: center;
+}
+
+.right-side-navbar {
+  background-color: blue;
+  color: red;
+}

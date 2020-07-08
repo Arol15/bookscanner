@@ -1,0 +1,22 @@
+.searchbox-wrap {
+  padding: 15px;
+}
+
+.searchbox {
+  margin: 10px auto;
+  width: 80%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.search-button {
+  padding: 8px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
