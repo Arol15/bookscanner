@@ -12,11 +12,18 @@ function Search({ handleSearch, search }) {
           name=""
           id=""
           className="searchbox"
-          //   onKeyPress={search}
         />
         <button type="submit" className="search-button">
           Search
         </button>
+        {/* <select defaultValue="sort" onChange={handleSort}> */}
+        {/* <select defaultValue="sort">
+          <option disabled value="sort">
+            Sort
+          </option>
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+        </select> */}
       </form>
     </section>
   );
