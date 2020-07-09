@@ -4,11 +4,10 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import { Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer";
-import Books from "./components/Books";
 
 function App() {
   return (
-    <div className="App">
+    <div className="ui container">
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/signup" component={Signup} />
