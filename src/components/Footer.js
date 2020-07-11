@@ -3,9 +3,12 @@ import "../stylesheets/footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer-container">
-      <div>CONNECT WITH ME</div>
-      <p>Github and LinkedIn Icons</p>
+    <footer className="footer">
+      <div>About Me</div>
+      <div className="icons">
+        <i className="github icon"></i>
+        <i className="linkedin alternate icon"></i>
+      </div>
     </footer>
   );
 };

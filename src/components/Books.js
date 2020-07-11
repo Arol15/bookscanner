@@ -3,22 +3,27 @@ import Search from "./Search";
 import BookList from "./BookList";
 import "../stylesheets/books.css";
 import axios from "axios";
+import bestsellers from "./bestsellers.js";
+import { Link } from "react-router-dom";
 
 const Books = () => {
   const [state, setState] = useState({
     s: "",
     books: [],
+    //books: bestsellers.books,
     // sort: "",
   });
+  //work on it
 
   const apiurl = "https://www.googleapis.com/books/v1/volumes";
 
   const search = (e) => {
     e.preventDefault();
     axios(apiurl + "?q=" + state.s).then(({ data }) => {
-      cleanData(data);
-      let books = data.items;
-      //   console.log(books);
+      //cleanData(data);
+      let bookData = cleanData(data);
+      let books = bookData;
+      console.log(books);
 
       setState((prevState) => {
         return { ...prevState, books: books };
@@ -45,16 +50,28 @@ const Books = () => {
 
   const cleanData = (data) => {
     const cleanedData = data.items.map((book) => {
-      if (book.volumeInfo.hasOwnProperty("publishedDate") === false) {
-        book.volumeInfo["publishedDate"] = "0000";
-      } else if (!book.volumeInfo.hasOwnProperty("imageLinks")) {
-        book.volumeInfo["imageLinks"] = {
-          thumbnail:
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kargomaster.com%2F31080c&psig=AOvVaw3B0Q6DTfXepYY2AsDTY57t&ust=1594258444617000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJiGiNTBvOoCFQAAAAAdAAAAABAI",
-        };
-      }
-      return book;
+      let bookData = {};
+      bookData.publishedDate = book.volumeInfo.publishedDate
+        ? book.volumeInfo.publishedDate.substring(0, 4)
+        : "n/a";
+      bookData.thumbnail = book.volumeInfo.imageLinks.thumbnail;
+      bookData.authors = book.volumeInfo.authors;
+      bookData.title = book.volumeInfo.title;
+
+      // if (book.volumeInfo.hasOwnProperty("publishedDate") === false) {
+      //   book.publishedDate = "0000";
+      // } else if (book.volumeInfo.hasOwnProperty("publishedDate") === true) {
+      //   book.publishedDate = book.volumeInfo.publishedDate;
+      // } else if (!book.volumeInfo.hasOwnProperty("imageLinks")) {
+      //   book.thumbnail =
+      //     "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kargomaster.com%2F31080c&psig=AOvVaw3B0Q6DTfXepYY2AsDTY57t&ust=1594258444617000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJiGiNTBvOoCFQAAAAAdAAAAABAI";
+      // } else if (book.volumeInfo.hasOwnProperty("imageLinks")) {
+      //   book.thumbnail = book.volumeInfo.imageLinks.thumbnail;
+      // }
+      //console.log(bookData);
+      return bookData;
     });
+
     return cleanedData;
   };
 

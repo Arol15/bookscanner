@@ -1,17 +1,15 @@
 import React from "react";
-import logo from "../images/logo.png";
-import Login from "./Login";
 import "../stylesheets/navbar.css";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <span>Book Icon</span>
-      <div>Bookscanner</div>
+      <div className="logo">Bookscanner</div>
       <div>Hi Reader!</div>
-      <div className="right-side-navbar">
-        <Login />
-      </div>
+      <NavLink to="/login">Login</NavLink>
+      <div>New here? Create a new account!</div>
+      <Link to="/signup">Sign Up</Link>
     </nav>
   );
 };

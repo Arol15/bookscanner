@@ -4,7 +4,7 @@ import "../stylesheets/book-list.css";
 
 function BookList({ books }) {
   return (
-    <section className="results-books">
+    <section className="Booklist">
       {books.map((book) => (
         <BookCard key={book.id} book={book} />
       ))}

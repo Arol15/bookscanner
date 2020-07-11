@@ -1,15 +1,16 @@
 import React from "react";
 import Navbar from "./Navbar";
 import MainPage from "./MainPage";
-import { Link } from "react-router-dom";
+import Footer from "./Footer";
+import BooksMain from "./BooksMain";
 
-const LandingPage = () => {
+const LandingPage = (props) => {
   return (
     <>
       <Navbar />
-      <Link to="/login">Login</Link>
-      <Link to="/signup">Sing Up</Link>
-      <MainPage />
+      <MainPage className="ui container" />
+      <BooksMain />
+      <Footer />
     </>
   );
 };

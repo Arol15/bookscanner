@@ -14,7 +14,7 @@ function Search({ handleSearch, search }) {
           className="searchbox"
         />
         <button type="submit" className="search-button">
-          Search
+          <i className="search icon"></i>
         </button>
         {/* <select defaultValue="sort" onChange={handleSort}> */}
         {/* <select defaultValue="sort">

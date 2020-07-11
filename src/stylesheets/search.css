@@ -1,10 +1,14 @@
 .searchbox-wrap {
   padding: 15px;
+  min-width: 600px;
+  display: flex;
+  justify-content: center;
 }
 
 .searchbox {
   margin: 10px auto;
-  width: 80%;
+  height: 50px;
+  width: 500px;
   padding: 8px;
   border: none;
   outline: none;
@@ -14,6 +18,7 @@
 
 .search-button {
   padding: 8px;
+  height: 50px;
   border: none;
   background-color: white;
   cursor: pointer;

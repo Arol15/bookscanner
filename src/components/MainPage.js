@@ -1,18 +1,16 @@
 import React from "react";
-import Signup from "./Signup";
 import Search from "./Search";
 import "../stylesheets/main-page.css";
+import Books from "./Books";
+import BooksMain from "./BooksMain";
 
-function MainPage() {
+function MainPage(props) {
   return (
     <div className="main-page">
-      <header>
+      <div className="mainpage-header">
         <h2>Your next favorite book can't wait to meet you!</h2>
-      </header>
-      <main>
-        <Search />
-        <Signup />
-      </main>
+      </div>
+      <main className="mainpage-search">{<Search />}</main>
     </div>
   );
 }

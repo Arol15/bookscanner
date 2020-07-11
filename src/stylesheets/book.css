@@ -1,18 +1,12 @@
-/* .book-card {
-  width: 25%;
-  padding: 15px;
-} */
-
-/* img {
-  width: 150px;
-  height: 150px;
-} */
-
-.book-card {
+.Book {
   width: 250px;
   padding: 10px;
   margin: 1rem;
   box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
   text-align: center;
   background-color: white;
+}
+
+img {
+  width: 150px;
 }
