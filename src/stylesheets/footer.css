@@ -10,8 +10,8 @@
     #9a8478,
     #1e130c
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  height: 120px;
+  border-top: 2px solid #1e130c;
+  /* height: 120px; */
 }
 
 .footer-header {

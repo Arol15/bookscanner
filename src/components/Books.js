@@ -10,8 +10,8 @@ import NavbarSecond from "./NavbarSecond";
 const Books = () => {
   const [state, setState] = useState({
     s: "",
-    books: [],
-    //books: bestsellers.books,
+    //books: [],
+    books: bestsellers.books,
     // sort: "",
   });
   //work on it

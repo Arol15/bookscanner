@@ -6,13 +6,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-top: 2px solid #1e130c;
+  border-bottom: 2px solid #1e130c;
 }
 
 .mainpage-header h2 {
   /* color: #200122; */
   color: white;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 52px;
   text-align: center;
   width: 80%;
   margin: auto;
@@ -20,7 +22,16 @@
 }
 
 .mainpage-header h2 {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
-  opacity: 0.9;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: #1e130c;
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 6px 6px 16px #1e130c;
+  /* mix-blend-mode: exclusion; */
+  /* background: inherit;
+  background-clip: text;
+  color: transparent;
+  filter: invert(1); */
+  background: #1e130c20;
+
+  border-radius: 25px;
 }

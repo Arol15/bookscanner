@@ -17,7 +17,7 @@ class BooksMain extends Component {
         title: "Get Out of Your Head: Stopping the Spiral of Toxic Thoughts",
         authors: "Jennie Allen",
         publishedDate: "2020",
-        thumbnail: "../images/get-out-of-your-head.jpg",
+        thumbnail: "/images/get-out-of-your-head.jpg",
         //"https://images-na.ssl-images-amazon.com/images/I/51ZZJMQK93L._SX336_BO1,204,203,200_.jpg",
       },
       {
@@ -98,7 +98,14 @@ class BooksMain extends Component {
   };
 
   openPopup = (id) => {
-    // console.log("yes", id);
+    console.log("yes", id);
+    // this.setState((prevState) => {
+    //   const updatedBooks = prevState.books.map((book) => {
+    //     if (book.id === id) {
+    //       book.id = selected.id;
+    //     }
+    //   });
+    // });
   };
 
   closePopup = () => {};
