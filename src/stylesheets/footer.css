@@ -14,12 +14,20 @@
   height: 120px;
 }
 
-.footer div {
+.footer-header {
   color: white;
   text-align: center;
-  font-size: 20px;
-  padding: 15px;
+  font-size: 25px;
+  padding: 20px;
 }
 
-.github {
+.icons {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.icons a {
+  color: white;
 }

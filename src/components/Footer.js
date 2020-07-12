@@ -4,10 +4,14 @@ import "../stylesheets/footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div>About Me</div>
+      <div className="footer-header">About Us</div>
       <div className="icons">
-        <i className="github icon"></i>
-        <i className="linkedin alternate icon"></i>
+        <a href="https://github.com/Arol15">
+          <i className="github icon"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/lorarusinouskaya/">
+          <i className="linkedin alternate icon"></i>
+        </a>
       </div>
     </footer>
   );
