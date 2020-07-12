@@ -4,7 +4,7 @@ import "../stylesheets/main-page.css";
 import Books from "./Books";
 import BooksMain from "./BooksMain";
 
-function MainPage(props) {
+function MainPage() {
   return (
     <div className="main-page">
       <div className="mainpage-header">

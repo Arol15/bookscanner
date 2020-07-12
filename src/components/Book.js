@@ -3,9 +3,16 @@ import "../stylesheets/book.css";
 
 class Book extends React.Component {
   render() {
-    const { title, authors, publishedDate, thumbnail } = this.props;
+    const {
+      title,
+      authors,
+      publishedDate,
+      thumbnail,
+      openPopup,
+      id,
+    } = this.props;
     return (
-      <div className="Book">
+      <div onClick={() => openPopup(id)} className="Book">
         <img src={thumbnail} alt={title} />
         <h1>{title}</h1>
         <div>Author: {authors}</div>

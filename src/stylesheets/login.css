@@ -1,0 +1,17 @@
+.login-container {
+  width: 100wh;
+  height: 100vh;
+  background-image: url("../images/heartbook.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-header {
+  font-family: "Pacifico", cursive;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 30px;
+}

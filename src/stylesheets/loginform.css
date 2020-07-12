@@ -1,0 +1,15 @@
+.login-wrapper {
+  display: block;
+  width: 60%;
+  height: 400px;
+  margin: auto;
+  padding: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  opacity: 0.9;
+}
+
+.button-login {
+  display: flex;
+  justify-content: center;
+}

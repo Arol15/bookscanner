@@ -1,16 +1,16 @@
 import React from "react";
-import "../stylesheets/navbar.css";
+import "../stylesheets/navbarsecond.css";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const NavbarSecond = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar-second">
       <div className="logo">Bookscanner</div>
       <div className="navbar-right">
         <div className="login">
-          <div>Hi Reader!</div>
-          <div className="login-button">
-            <NavLink to="/login">Login</NavLink>
+          <div>Hi Demo!</div>
+          <div className="logout-button">
+            <NavLink to="/logout">Logout</NavLink>
           </div>
         </div>
         {/* <div className="signup">
@@ -22,4 +22,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarSecond;

@@ -1,17 +1,24 @@
 import React, { Component } from "react";
 import Book from "./Book";
 import "../stylesheets/booksmain.css";
+import bestsellers from "./bestsellers.js";
 
 class BooksMain extends Component {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     books: bestsellers,
+  //   };
+  // }
   static defaultProps = {
-    book: [
+    books: [
       {
         id: 1,
         title: "Get Out of Your Head: Stopping the Spiral of Toxic Thoughts",
         authors: "Jennie Allen",
         publishedDate: "2020",
-        thumbnail:
-          "https://images-na.ssl-images-amazon.com/images/I/51ZZJMQK93L._SX336_BO1,204,203,200_.jpg",
+        thumbnail: "../images/get-out-of-your-head.jpg",
+        //"https://images-na.ssl-images-amazon.com/images/I/51ZZJMQK93L._SX336_BO1,204,203,200_.jpg",
       },
       {
         id: 2,
@@ -90,22 +97,41 @@ class BooksMain extends Component {
     ],
   };
 
+  openPopup = (id) => {
+    // console.log("yes", id);
+  };
+
+  closePopup = () => {};
+
   render() {
+    const bookItem = this.props.books.map((b) => (
+      <Book
+        id={b.id}
+        key={b.id}
+        title={b.title}
+        authors={b.authors}
+        publishedDate={b.publishedDate}
+        thumbnail={b.thumbnail}
+        openPopup={this.openPopup}
+      />
+    ));
     return (
       <section className="BookMain">
         <div className="BookMain-header">
           <h1>Bookscanner's Top 10 Books</h1>
         </div>
         <div className="BookMain-Cards">
-          {this.props.book.map((b) => (
+          {bookItem}
+          {/* {this.state.book.map((b) => (
             <Book
-              id={b.id}
+              key={b.id}
               title={b.title}
               authors={b.authors}
               publishedDate={b.publishedDate}
               thumbnail={b.thumbnail}
+              onClick={this.openPopup}
             />
-          ))}
+          ))} */}
         </div>
       </section>
     );

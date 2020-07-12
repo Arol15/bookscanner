@@ -1,3 +1,21 @@
 .books-wrapper {
-  background-color: cornflowerblue;
+  height: 100%;
+  /* border: 1px solid red; */
+  background: #efefbb; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #d4d3dd,
+    #efefbb
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #d4d3dd,
+    #efefbb
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  min-height: 500px;
+}
+
+.books-main-container {
+  height: 100%;
 }

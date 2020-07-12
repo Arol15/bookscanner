@@ -1,0 +1,36 @@
+.navbar-second {
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 20px;
+}
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 35px;
+}
+
+.logout {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  align-items: center;
+}
+
+.logout-button {
+  padding-left: 15px;
+}

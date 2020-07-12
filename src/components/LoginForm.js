@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "semantic-ui-react";
 import data from "./users.js";
 import { useHistory } from "react-router-dom";
+import "../stylesheets/loginform.css";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("demo@demo.com");
@@ -31,25 +32,31 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
+    <div className="login-wrapper">
       <Form>
-        <input
-          name="email"
-          type="email"
-          onChange={handleChange}
-          placeholder="Email address"
-          value={email}
-        ></input>
-        <input
-          type="password"
-          name="password"
-          onChange={handleChange}
-          placeholder="Password"
-          value={password}
-        />
-        <Button onClick={handleClick} primary>
-          Sign In
-        </Button>
+        <Form.Field>
+          <input
+            name="email"
+            type="email"
+            onChange={handleChange}
+            placeholder="Email address"
+            value={email}
+          ></input>
+        </Form.Field>
+        <Form.Field>
+          <input
+            type="password"
+            name="password"
+            onChange={handleChange}
+            placeholder="Password"
+            value={password}
+          />
+        </Form.Field>
+        <div className="button-login">
+          <Button onClick={handleClick} primary>
+            Sign In
+          </Button>
+        </div>
       </Form>
     </div>
   );

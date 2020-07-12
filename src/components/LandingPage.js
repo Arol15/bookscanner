@@ -4,7 +4,7 @@ import MainPage from "./MainPage";
 import Footer from "./Footer";
 import BooksMain from "./BooksMain";
 
-const LandingPage = (props) => {
+const LandingPage = () => {
   return (
     <>
       <Navbar />

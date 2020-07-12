@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Search from "./Search";
 import BookList from "./BookList";
+import Footer from "./Footer";
 import "../stylesheets/books.css";
 import axios from "axios";
 import bestsellers from "./bestsellers.js";
-import { Link } from "react-router-dom";
+import NavbarSecond from "./NavbarSecond";
 
 const Books = () => {
   const [state, setState] = useState({
@@ -54,7 +55,9 @@ const Books = () => {
       bookData.publishedDate = book.volumeInfo.publishedDate
         ? book.volumeInfo.publishedDate.substring(0, 4)
         : "n/a";
-      bookData.thumbnail = book.volumeInfo.imageLinks.thumbnail;
+      bookData.thumbnail = book.volumeInfo.imageLinks.thumbnail
+        ? book.volumeInfo.imageLinks.thumbnail
+        : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kargomaster.com%2F31080c&psig=AOvVaw3B0Q6DTfXepYY2AsDTY57t&ust=1594258444617000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJiGiNTBvOoCFQAAAAAdAAAAABAI";
       bookData.authors = book.volumeInfo.authors;
       bookData.title = book.volumeInfo.title;
 
@@ -97,14 +100,20 @@ const Books = () => {
   //   };
 
   return (
-    <main className="books-wrapper">
-      <Search
-        handleSearch={handleSearch}
-        search={search}
-        // handleSort={handleSort}
-      />
-      <BookList books={state.books} />
-    </main>
+    <div className="books-main-container">
+      <NavbarSecond />
+      <div className="books-wrapper">
+        <Search
+          handleSearch={handleSearch}
+          search={search}
+          // handleSort={handleSort}
+        />
+        <div className="books-search-container">
+          <BookList books={state.books} />
+        </div>
+      </div>
+      <Footer />
+    </div>
   );
 };
 
