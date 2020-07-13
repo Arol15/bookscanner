@@ -19,3 +19,87 @@ img {
 .Book h1 {
   font-size: 14px;
 }
+
+.popup {
+  position: fixed;
+  /* display: flex;
+  flex-direction: column; */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: snow;
+  overflow-y: hidden;
+}
+
+.popup .content {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 25px;
+  color: black;
+}
+
+.content h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.popup-author {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.popup .content span {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.popup .content .rating {
+  margin-bottom: 30px;
+}
+
+.content .description {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 0px -15px 30px; */
+}
+
+.popup-img {
+  padding: 25px 0;
+  width: 150px;
+  height: 250px;
+}
+
+.description {
+  padding: 25px 15px;
+  color: #382110;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 15px;
+}
+
+.content-container {
+  display: flex;
+}
+
+.rating {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.popup .content .close {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #ffa751;
+  /* background: linear-gradient(to right, #9a8478, #1e130c); */
+  border-radius: 8px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

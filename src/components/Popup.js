@@ -16,7 +16,6 @@ function Popup(selected, closePopup) {
       <button className="close" onClick={closePopup}>
         Close
       </button>
-      <button>Add to My Reading List</button>
     </section>
   );
 }

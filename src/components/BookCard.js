@@ -3,6 +3,13 @@ import "../stylesheets/book-card.css";
 
 const BookCard = ({ book }) => {
   console.log(book);
+
+  // openPopup = (id) => {
+  //   console.log("yes", id);
+  // };
+
+  //onClick={() => openPopup(id)}
+
   return (
     <div className="book-card">
       <img src={book.thumbnail} alt="book"></img>

@@ -60,18 +60,7 @@ const Books = () => {
         : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kargomaster.com%2F31080c&psig=AOvVaw3B0Q6DTfXepYY2AsDTY57t&ust=1594258444617000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJiGiNTBvOoCFQAAAAAdAAAAABAI";
       bookData.authors = book.volumeInfo.authors;
       bookData.title = book.volumeInfo.title;
-
-      // if (book.volumeInfo.hasOwnProperty("publishedDate") === false) {
-      //   book.publishedDate = "0000";
-      // } else if (book.volumeInfo.hasOwnProperty("publishedDate") === true) {
-      //   book.publishedDate = book.volumeInfo.publishedDate;
-      // } else if (!book.volumeInfo.hasOwnProperty("imageLinks")) {
-      //   book.thumbnail =
-      //     "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kargomaster.com%2F31080c&psig=AOvVaw3B0Q6DTfXepYY2AsDTY57t&ust=1594258444617000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJiGiNTBvOoCFQAAAAAdAAAAABAI";
-      // } else if (book.volumeInfo.hasOwnProperty("imageLinks")) {
-      //   book.thumbnail = book.volumeInfo.imageLinks.thumbnail;
-      // }
-      //console.log(bookData);
+      bookData.id = book.id;
       return bookData;
     });
 

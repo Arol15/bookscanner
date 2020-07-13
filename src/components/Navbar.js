@@ -9,9 +9,9 @@ const Navbar = () => {
       <div className="navbar-right">
         <div className="login">
           <div>Hi Reader!</div>
-          <div className="login-button">
+          {/* <div className="login-button">
             <NavLink to="/login">Login</NavLink>
-          </div>
+          </div> */}
         </div>
         {/* <div className="signup">
           <div>New here? Create a new account!</div>
