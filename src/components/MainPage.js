@@ -53,8 +53,12 @@ function MainPage() {
         : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kargomaster.com%2F31080c&psig=AOvVaw3B0Q6DTfXepYY2AsDTY57t&ust=1594258444617000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJiGiNTBvOoCFQAAAAAdAAAAABAI";
       bookData.authors = book.volumeInfo.authors;
       bookData.title = book.volumeInfo.title;
-      bookData.description = book.volumeInfo.description;
-      bookData.rating = book.volumeInfo.averageRating;
+      bookData.description = book.volumeInfo.description
+        ? book.volumeInfo.description
+        : "Coming soon";
+      bookData.rating = book.volumeInfo.averageRating
+        ? book.volumeInfo.averageRating
+        : "N/a";
       return bookData;
     });
 
