@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Search from "./Search";
 import "../stylesheets/main-page.css";
-import Books from "./Books";
+//import Books from "./Books";
 import BooksMain from "./BooksMain";
 import axios from "axios";
 import BookList from "./BookList";
@@ -53,6 +53,8 @@ function MainPage() {
         : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kargomaster.com%2F31080c&psig=AOvVaw3B0Q6DTfXepYY2AsDTY57t&ust=1594258444617000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJiGiNTBvOoCFQAAAAAdAAAAABAI";
       bookData.authors = book.volumeInfo.authors;
       bookData.title = book.volumeInfo.title;
+      bookData.description = book.volumeInfo.description;
+      bookData.rating = book.volumeInfo.averageRating;
       return bookData;
     });
 

@@ -22,6 +22,7 @@ const Books = () => {
     e.preventDefault();
     axios(apiurl + "?q=" + state.s).then(({ data }) => {
       //cleanData(data);
+      console.log(data);
       let bookData = cleanData(data);
       let books = bookData;
       console.log(books);
@@ -51,6 +52,7 @@ const Books = () => {
 
   const cleanData = (data) => {
     const cleanedData = data.items.map((book) => {
+      //console.log(data.items);
       let bookData = {};
       bookData.publishedDate = book.volumeInfo.publishedDate
         ? book.volumeInfo.publishedDate.substring(0, 4)
@@ -61,6 +63,8 @@ const Books = () => {
       bookData.authors = book.volumeInfo.authors;
       bookData.title = book.volumeInfo.title;
       bookData.id = book.id;
+      bookData.description = book.volumeInfo.description;
+      bookData.rating = book.averageRating;
       return bookData;
     });
 

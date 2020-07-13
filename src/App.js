@@ -1,7 +1,7 @@
 import React from "react";
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Login";
-import Signup from "./components/Signup";
+//import Signup from "./components/Signup";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 //import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
